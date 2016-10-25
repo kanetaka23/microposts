@@ -2,3 +2,8 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+<h2>
+  <ul style="list-style:none;">
+    <li>Location：<%= @user.location.present? ? @user.location : "(設定されていません)" %></li>
+  <ul>
+</h2>
