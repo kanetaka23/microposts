@@ -1,0 +1,14 @@
+<div class="row">
+  <%= render 'user_info' %>
+  <div class="col-md-8">
+    <h1><%= @title %></h1>
+    <ul style='list-style: none;'>
+      <% @users.each do |user| %>
+        <li style="margin-bottom:50px;">
+          <%= link_to gravatar_for(user, size: 50), user %>
+          <span><%= link_to user.name, user %></span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
