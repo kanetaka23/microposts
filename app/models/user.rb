@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   validates :location, allow_blank: true, length: { minimum: 3, maximum: 30 }, on: :update
   
   has_secure_password
+  has_many :microposts
 end
